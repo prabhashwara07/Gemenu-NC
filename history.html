@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery - Gemunu National College</title>
-    <meta name="description" content="Gallery of Gemunu National College" />
-    <meta name="keywords" content="Gemunu National College, Gallery, Events" />
+    <title>History - Gemunu National College</title>
+    <meta name="description" content="History of Gemunu National College" />
+    <meta name="keywords" content="Gemunu National College, History, Legacy" />
     <meta name="author" content="Gemunu National College" />
     <meta name="theme-color" content="#1a1a1a" />
     <link rel="icon" href="assets/logo.png" type="image/png" />
@@ -81,24 +81,6 @@
         background-color: #4caf50;
       }
 
-      .btn-pagination {
-        background-color: var(--accent-gold);
-        color: var(--primary-dark);
-        padding: 0.5rem 1rem;
-        border-radius: 0.25rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-
-      .btn-pagination:hover {
-        background-color: #e0c568;
-      }
-
-      .btn-pagination:disabled {
-        background-color: #666;
-        cursor: not-allowed;
-      }
-
       .hero-overlay {
         background: linear-gradient(
           to right,
@@ -107,30 +89,39 @@
         );
       }
 
-      /* Image wrapper for gallery images */
-      .image-wrapper {
+      .ancient-document {
+        background: url("https://www.transparenttextures.com/patterns/old-wall.png"),
+          #f4ecd8;
+        background-blend-mode: overlay;
+        border: 3px solid #8b4513;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        padding: 2rem;
+        color: #3c2f2f;        
         position: relative;
-        width: 100%;
-        padding-bottom: 75%; /* Aspect ratio 4:3 */
-        overflow: hidden;
       }
 
-      .image-wrapper img {
+      .ancient-document::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensure image fits without distortion */
-        border: none;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle,
+          transparent 70%,
+          rgba(139, 69, 19, 0.1) 100%
+        );
+        pointer-events: none;
       }
 
-      .error-message {
-        color: #ff4444;
-        text-align: center;
-        padding: 1rem;
-        background-color: rgba(255, 68, 68, 0.1);
+      .principal-card {
+        background-color: var(--secondary-dark);
         border-radius: 0.5rem;
+        padding: 1rem;
+        text-align: start;
+        min-width: 200px;
       }
     </style>
     <script>
@@ -213,7 +204,6 @@
                   class="block px-4 py-2 hover:bg-[#444547] hover:text-accent-gold"
                   >Media Unit</a
                 >
-
                 <a
                   href="/competition.html"
                   class="block px-4 py-2 hover:bg-[#444547] hover:text-accent-gold"
@@ -270,12 +260,11 @@
             class="block px-6 py-2 text-gray-400 hover:text-accent-gold"
             >Media Unit</a
           >
-
           <a
             href="/competition.html"
             class="block px-6 py-2 text-gray-400 hover:text-accent-gold border-b border-gray-700"
             >Competition Winners</a
-          >          
+          >
         </div>
         <a
           href="#"
@@ -290,29 +279,120 @@
       </div>
     </nav>
 
-    <!-- Gallery Section -->
+    <!-- History Section -->
     <section class="py-16 bg-primary-dark" data-aos="fade-up">
       <div class="container mx-auto px-6">
         <div class="text-left mb-12">
-          <h2 class="text-3xl font-bold text-gray-300 heading-font">Gallery</h2>
+          <h2 class="text-3xl font-bold text-gray-300 heading-font">History</h2>
         </div>
 
-        <div
-          id="gallery-posts"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <!-- Posts will be dynamically inserted here -->
+        <!-- Ancient Document Style Content Area -->
+        <div class="ancient-document mb-12">          
+          <p class="text-lg">
+            The Sri Padmagiri Temple, located in Kuda Nelubewa, Anuradhapura,
+            served as the foundation for this journey. Based on unwritten
+            evidence, it's said that from 1948 to 1952, monks residing at the
+            temple offered education to children. On May 12, 1952, a formal
+            school was established on privately owned land near the town of Kuda
+            Nelubewa, backed by written documentation.
+            <br /><br />
+            In the early days, there
+            was no fence or formal structure—just a thatched roof made of
+            coconut fronds. Under the guidance of the first principal, M.P.
+            Piyasena, and with R.M. Podi Manike as the teacher, 21 children came
+            to learn their ABCs. 
+            <br /><br />
+            As the school gradually progressed, by 1954, it
+            had grown to 56 students studying inside a more structured building
+            with timber walls. After receiving three decades of support and
+            growth, the institution proudly became a fully-fledged Maha
+            Vidyalaya (Senior School) by 1980. 
+            <br /><br />
+            A major turning point came in
+            1985 when it was included in the Navodaya project (a national school
+            development initiative). Since then, the school experienced rapid
+            physical and human development. Modern facilities like a fully
+            equipped science lab, computer unit, library, three-storied
+            classroom building, and an activity room stand as strong proof of
+            this progress. 
+            <br /><br />
+            By the 1990s, the staff had grown to over 40
+            teachers, and student numbers surpassed 500—undeniable signs of
+            continuous development. In 2003, being selected among 22 Navodaya
+            schools across the island marked a proud achievement for the school.
+            <br /><br />
+            Moreover, in a competition organized by the Northern Province
+            Department of Education to select the best schools, this school
+            emerged as the top performer at the zonal level. 
+            <br /><br />
+            Currently a
+            1C-class school under the Navodaya project, the school has had the
+            honor of being led by 17 principals over the years, and it continues
+            to develop rapidly. In 2012, the school earned the Excellence Award
+            in the All-Island Productive Schools Competition, organized jointly
+            by the Ministry of Education and DFCC Bank—yet another moment of
+            pride.
+          </p>
         </div>
 
-        <!-- Pagination -->
-        <div class="flex justify-center items-center space-x-4 mt-12">
-          <button id="prev-page" class="btn-pagination" disabled>
-            <i class="fas fa-chevron-left mr-2"></i> 
-          </button>
-          <span id="page-info" class="text-gray-300"></span>
-          <button id="next-page" class="btn-pagination">
-             <i class="fas fa-chevron-right ml-2"></i>
-          </button>
+        <!-- Former Principals Section -->
+        <div class="text-left mb-6">
+          <h3 class="text-xl font-bold text-gray-300 heading-font">
+            Former Principals
+          </h3>
+        </div>
+        <div class="overflow-x-auto pb-4">
+          <div class="flex space-x-4">
+            <div class="principal-card">
+              <p class="text-gray-300 font-medium">W.M.M.Dissanayake</p>
+              <p class="text-gray-400 text-sm">1964-1967</p>
+            </div>
+            <div class="principal-card">
+              <p class="text-gray-300 font-medium">Thushan Shamika</p>
+              <p class="text-gray-400 text-sm">1987-1999</p>
+            </div>
+            <div class="principal-card">
+              <p class="text-gray-300 font-medium">Thushan Shamika</p>
+              <p class="text-gray-400 text-sm">1987-1999</p>
+            </div>
+            <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+              <div class="principal-card">
+                <p class="text-gray-300 font-medium">Thushan Shamika</p>
+                <p class="text-gray-400 text-sm">1987-1999</p>
+              </div>
+            <!-- Add more principal cards as needed -->
+          </div>
         </div>
       </div>
     </section>
@@ -367,7 +447,6 @@
             >
               <i class="fab fa-facebook"></i>
             </a>
-
             <a
               href="https://whatsapp.com/channel/0029VaIekHY6GcGDveoF973f"
               class="text-green-400 text-2xl hover:text-yellow-400"
@@ -441,131 +520,6 @@
           aboutDropdown.classList.add("hidden");
         }
       });
-
-      // Pagination and dynamic post rendering
-      const postsContainer = document.getElementById("gallery-posts");
-      const prevPageBtn = document.getElementById("prev-page");
-      const nextPageBtn = document.getElementById("next-page");
-      const pageInfo = document.getElementById("page-info");
-
-      // Array of objects containing image URLs and corresponding Facebook post URLs
-      const galleryItems = [
-        {
-          imageUrl: "assets/gallery/1.jpg", // Replace with your image path
-          postUrl:
-            "https://web.facebook.com/nelugmv/posts/pfbid096wG9FKnC9ZnYQE6wRqQTn6AHfmrGJSvu8a84MuPsrCiY27HnakPJXPCZ7xsm61bl",
-        },
-        {
-          imageUrl: "assets/gallery/2.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/16A1dKRp8P/",
-        },
-
-        {
-          imageUrl: "assets/gallery/3.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/16jjNquCk6/",
-        },
-        {
-          imageUrl: "assets/gallery/4.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/1E1CRkusMz/",
-        },
-        {
-          imageUrl: "assets/gallery/5.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/19DHR4fKVu/",
-        },
-        {
-          imageUrl: "assets/gallery/6.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/1AmbnSaStK/",
-        },
-        {
-          imageUrl: "assets/gallery/7.jpg", // Replace with your image path
-          postUrl:
-            "https://web.facebook.com/share/p/1BrJmUhDhW/",
-        },
-        {
-          imageUrl: "assets/gallery/8.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/15jXh5cLaq/",
-        },
-
-        {
-          imageUrl: "assets/gallery/9.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/1MFU2FnEPu/",
-        },
-        {
-          imageUrl: "assets/gallery/10.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/1CDdoHDVbg/",
-        },
-        {
-          imageUrl: "assets/gallery/11.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/1BSCyX9UPK/",
-        },
-        {
-          imageUrl: "assets/gallery/12.jpg", // Replace with your image path
-          postUrl: "https://web.facebook.com/share/p/18nAyDGjx3/",
-        },
-      ];
-
-      const postsPerPage = 6;
-      let currentPage = 1;
-
-      function renderPosts() {
-        const start = (currentPage - 1) * postsPerPage;
-        const end = start + postsPerPage;
-        const currentItems = galleryItems.slice(start, end);
-
-        postsContainer.innerHTML = "";
-        currentItems.forEach((item, index) => {
-          const postElement = document.createElement("div");
-          postElement.className = "content-card overflow-hidden";
-          postElement.setAttribute("data-aos", "fade-up");
-          postElement.setAttribute("data-aos-delay", `${index * 100}`);
-
-          try {
-            postElement.innerHTML = `
-              <a href="${item.postUrl}" target="_blank" rel="noopener noreferrer">
-                <div class="image-wrapper">
-                  <img src="${item.imageUrl}" alt="Gallery Image" />
-                </div>
-              </a>
-            `;
-          } catch (error) {
-            postElement.innerHTML = `
-              <div class="error-message">
-                Unable to load this image. Please ensure the image URL is correct.
-              </div>
-            `;
-          }
-
-          postsContainer.appendChild(postElement);
-        });
-
-        // Update pagination info
-        const totalPages = Math.ceil(galleryItems.length / postsPerPage);
-        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-
-        // Update button states
-        prevPageBtn.disabled = currentPage === 1;
-        nextPageBtn.disabled = currentPage === totalPages;
-      }
-
-      prevPageBtn.addEventListener("click", () => {
-        if (currentPage > 1) {
-          currentPage--;
-          renderPosts();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
-
-      nextPageBtn.addEventListener("click", () => {
-        const totalPages = Math.ceil(galleryItems.length / postsPerPage);
-        if (currentPage < totalPages) {
-          currentPage++;
-          renderPosts();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
-
-      // Initial render
-      renderPosts();
     </script>
   </body>
 </html>
