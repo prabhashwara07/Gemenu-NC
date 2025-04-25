@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemunu National College</title>
+    <meta name="description" content="Official website of Gemunu National College" />
+    <meta name="keywords" content="Gemunu National College, Education, School" />
+    <meta name="author" content="Gemunu National College" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      /* Custom styles with dark theme and gold/green accents */
+      :root {
+        --primary-dark: #1a1a1a;
+        --secondary-dark: #2c2c2c;
+        --accent-gold: #d4af37;
+        --accent-green: #2e7d32;
+        --neutral-dark: #121212;
+        --neutral-light: #e0e0e0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--primary-dark);
+        color: var(--neutral-light);
+      }
+
+      .content-card {
+        background-color: var(--secondary-dark);
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .section-title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        height: 3px;
+        width: 60px;
+        background-color: var(--accent-gold);
+      }
+
+      .btn-primary {
+        background-color: var(--accent-green);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.25rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #4caf50;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(
+          to right,
+          rgba(26, 26, 26, 0.95),
+          rgba(26, 26, 26, 0.7)
+        );
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: "#1a1a1a",
+                light: "#2c2c2c",
+              },
+              accent: {
+                gold: "#d4af37",
+                green: "#2e7d32",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="bg-[#1a1a1a] shadow-md sticky top-0 z-10" data-aos="fade-down">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center space-x-3">
+            <img src="assets/logo.png" alt="College Logo" class="w-12 h-12" />
+            <div class="hidden sm:block">
+              <div class="text-lg font-bold text-accent-gold heading-font">
+                Gemunu National College
+              </div>
+              <div class="text-xs text-gray-400">Success Through Knowledge</div>
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div
+            class="hidden md:flex items-center space-x-8 text-gray-300 text-sm font-medium"
+          >
+            <a href="#" class="hover:text-accent-gold transition font-medium"
+              >HOME</a
+            >
+
+            <!-- About Dropdown (click) -->
+            <div class="relative">
+              <button
+                id="about-btn"
+                class="hover:text-accent-gold flex items-center gap-1 transition focus:outline-none font-medium"
+              >
+                ABOUT
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                id="about-dropdown"
+                class="absolute left-0 mt-2 w-48 bg-[#1a1a1a] text-gray-300 rounded-lg shadow-lg hidden z-40"
+              >
+                <a
+                  href="/media-unit.html"
+                  class="block px-4 py-2 hover:bg-[#444547] hover:text-accent-gold"
+                  >Media Unit</a
+                >
+                <a
+                  href="/prefects.html"
+                  class="block px-4 py-2 hover:bg-[#444547] hover:text-accent-gold"
+                  >Prefects</a
+                >
+                <a
+                  href="/competition.html"
+                  class="block px-4 py-2 hover:bg-[#444547] hover:text-accent-gold"
+                  >Competition Winners</a
+                >
+              </div>
+            </div>
+
+            <a href="/gallery.html" class="hover:text-accent-gold transition font-medium"
+              >GALLERY</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-accent-gold transition font-medium"
+              >CONTACT</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-300 focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-secondary-dark border-t border-gray-700"
+      >
+        <a
+          href="#"
+          class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-accent-gold border-b border-gray-700"
+          >HOME</a
+        >
+        <button
+          id="mobile-about-btn"
+          class="block w-full text-left px-4 py-3 text-gray-300 font-medium border-b border-gray-700 focus:outline-none"
+        >
+          ABOUT
+        </button>
+        <div id="mobile-about-dropdown" class="hidden bg-gray-700">
+          <a
+            href="#"
+            class="block px-6 py-2 text-gray-400 hover:text-accent-gold"
+            >Media Unit</a
+          >
+          <a
+            href="#"
+            class="block px-6 py-2 text-gray-400 hover:text-accent-gold"
+            >Prefects</a
+          >
+          <a
+            href="#"
+            class="block px-6 py-2 text-gray-400 hover:text-accent-gold border-b border-gray-700"
+            >Competition Winners</a
+          >
+        </div>
+        <a
+          href="#"
+          class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-accent-gold border-b border-gray-700"
+          >GALLERY</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-accent-gold"
+          >CONTACT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[85vh] overflow-hidden" data-aos="fade-up">
+      <div
+        class="absolute inset-0 bg-cover bg-center parallax-bg"
+        style="background-image: url('/assets/hero3.jpg')"
+      ></div>
+      <div class="absolute inset-0 hero-overlay z-10"></div>
+      <div
+        class="relative z-20 flex flex-col items-center justify-center h-full text-center px-4"
+      >
+        <div class="mb-2 text-gray-300 text-sm font-medium tracking-widest">
+          ESTABLISHED IN 1952
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-bold text-white mb-2 heading-font">
+          Gemunu National College
+        </h1>
+        <p class="text-gray-300 text-lg mb-8 max-w-xl">
+          Success through knowledge
+        </p>
+      </div>
+
+      <!-- Gold Wave (bottom layer) -->
+      <div class="absolute bottom-0 left-0 right-0 z-10">
+        <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 0L80 20C160 40 320 80 480 80C640 80 800 40 960 20C1120 0 1280 10 1360 20L1440 30V150H0V0Z"
+            fill="#d4af37"
+          />
+        </svg>
+      </div>
+
+      <!-- Green Wave (top layer, slightly higher & different shape) -->
+      <div
+        class="absolute bottom-0 left-0 right-0 z-20 transform translate-y-[10px]"
+      >
+        <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 0L60 10C120 20 240 50 360 60C480 70 600 70 720 60C840 50 960 30 1080 25C1200 20 1320 30 1380 35L1440 40V150H0V0Z"
+            fill="#228B22"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <!-- Vision and Mission -->
+    <section class="py-16 bg-secondary-dark" data-aos="fade-up">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-accent-gold mb-2 heading-font">
+            Our Vision & Mission
+          </h2>
+          <div class="w-24 h-1 bg-accent-gold mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <div
+            class="content-card p-8 border-t-4 border-accent-gold"
+            data-aos="fade-right"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-accent-gold bg-opacity-20 p-3 rounded-full mr-4">
+                <i class="fas fa-eye text-accent-gold text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-accent-gold heading-font">
+                Our Vision
+              </h3>
+            </div>
+            <p class="text-gray-400 leading-relaxed">
+              Tomorrow's winners, visionaries of the path ahead, a generation
+              that conquers the world.
+            </p>
+          </div>
+
+          <div
+            class="content-card p-8 border-t-4 border-accent-green"
+            data-aos="fade-left"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-accent-green bg-opacity-20 p-3 rounded-full mr-4">
+                <i class="fas fa-bullseye text-accent-green text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-accent-green heading-font">
+                Our Mission
+              </h3>
+            </div>
+            <p class="text-gray-400 leading-relaxed">
+              To maximize the effectiveness of limited human and physical
+              resources, operate within infinite possibilities, and contribute
+              to the world knowledgeable, virtuous, and empowered citizens who
+              are well-rounded and enriched.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="py-16 bg-[#2B2B2B]" data-aos="zoom-in">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/3">
+            <div class="rounded-lg overflow-hidden shadow-md">
+              <img
+                src="/assets/principal.jpg"
+                alt="Principal"
+                class="w-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <div class="flex mb-4">
+              <div class="text-4xl text-accent-gold">"</div>
+            </div>
+            <blockquote
+              class="text-xl text-gray-400 italic mb-4 font-light leading-relaxed"
+            >
+              Since our founding in 1948, we have remained steadfast in our
+              mission to nurture young minds into compassionate, confident, and
+              capable leaders. Here at Gemunu, education is more than just
+              academics — it’s about character, creativity, and community. Our
+              dedicated teachers, innovative programs, and vibrant student life
+              ensure that every learner is challenged, supported, and
+              celebrated. We believe in empowering our students with the skills
+              and values needed to thrive in an ever-changing world.
+            </blockquote>
+            <div class="flex justify-end">
+              <div class="text-4xl text-accent-gold">"</div>
+            </div>
+            <div class="mt-4">
+              <p class="font-medium text-accent-gold">W.M.S. Priyashantha</p>
+              <p class="text-sm text-gray-500">
+                Principal of Gemunu National College
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-16 bg-secondary-dark" data-aos="fade-up" id="contact">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-accent-gold mb-2 heading-font">
+            Contact Us
+          </h2>
+          <div class="w-24 h-1 bg-accent-gold mx-auto"></div>
+          <p class="text-gray-400 mt-4">
+            Get in touch with us for more information
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="space-y-8 flex flex-col justify-center">
+            <div
+              class="flex items-center space-x-4 p-4 bg-[#2c2c2c] rounded-lg shadow-sm"
+              data-aos="fade-right"
+            >
+              <div
+                class="h-12 p-2 rounded-full bg-accent-green flex items-center justify-center text-white shadow-md"
+              >
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-400 mb-1">Phone Number</div>
+                <span class="font-medium text-gray-300">0252052794 \ 071 974 2295</span>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center space-x-4 p-4 bg-[#2c2c2c] rounded-lg shadow-sm"
+              data-aos="fade-right"
+            >
+              <div
+                class="h-12 p-2 rounded-full bg-accent-green flex items-center justify-center text-white shadow-md"
+              >
+                <i class="fas fa-mail-reply"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-400 mb-1">Email Address</div>
+                <span class="font-medium text-gray-300 ">gemunumedia.1952@gmail.com</span>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center space-x-4 p-4 bg-[#2c2c2c] rounded-lg shadow-sm"
+              data-aos="fade-right"
+            >
+              <div
+                class="h-12 p-3 rounded-full bg-accent-green flex items-center justify-center text-white shadow-md"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <div class="text-sm text-gray-400 mb-1">Address</div>
+                <span class="font-medium text-gray-300 ">
+                    Kuda Nelubewa Road, Kuda Nelubewa, Sri Lanka</span>
+              </div>
+            </div>
+            
+            
+          </div>
+
+          <div>
+            <div
+              class="h-72 bg-gray-700 rounded-lg overflow-hidden shadow-md"
+              data-aos="fade-left"
+            >
+
+            
+
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.1074853185298!2d80.38971869755059!3d8.281391624875942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcf4759eba56e7%3A0x8a6fe30e97d17882!2sKudanelubewa%20Gamunu%20Maha%20Vidyalaya!5e0!3m2!1sen!2slk!4v1745524064278!5m2!1sen!2slk"
+                class="w-full h-full border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no>com/maps/embed?pb=..."
+                class="w-full h-full border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-primary-dark text-gray-300 relative"
+      data-aos="fade-up"
+      style="
+        background-image: url('/assets/footer.jpg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
+
+      <div
+        class="container mx-auto px-6 pt-12 pb-6 flex flex-col items-center justify-center min-h-[300px] relative z-10"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-center items-center mb-8 text-center w-full"
+        >
+          <div class="mb-8 md:mb-0 md:w-1/2 flex flex-col items-center">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+              <div
+                class="heading-font text-xl font-bold text-accent-gold uppercase"
+              >
+                Gemunu National College
+              </div>
+            </div>
+            <span class="text-white text-sm mb-4 max-w-lg">
+
+              This is the official website of Gemunu National 
+              College, built to share reliable, up-to-date news about the 
+              school and its community. It was developed through the efforts of the Media Unit, 
+              with special thanks to former Head Prefect and Media Committee President (2023–2024),                             
+              <a
+                href="https://www.facebook.com/share/1DPKr7wDcp/"
+                class="text-accent-gold hover:underline"
+                >Isara N Liyanage</a
+              >, whose leadership and support helped bring this project to life.
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 mb-4">
+            <a href="https://www.facebook.com/share/1BeJ6zDDdx/" class="text-blue-400 text-2xl hover:text-yellow-400">
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029VaIekHY6GcGDveoF973f" class="text-green-400 text-2xl hover:text-yellow-400">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-400 pt-3 text-center text-sm text-gray-100 w-full"
+        >
+          <p>
+            © 2025 GMV | Developed by
+            <a
+              href="https://nandun.me/"
+              class="text-accent-gold hover:underline"
+              >Nandun Prabhashwara</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      // Parallax
+      window.addEventListener("scroll", function () {
+        const parallax = document.querySelector(".parallax-bg");
+        let scroll = window.pageYOffset;
+        parallax.style.transform = "translateY(" + scroll * 0.5 + "px)";
+      });
+
+      // Mobile menu toggle with animation
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      let isMenuOpen = false;
+
+      menuBtn.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileMenu.classList.remove("max-h-0");
+          mobileMenu.classList.add("max-h-[500px]");
+        } else {
+          mobileMenu.classList.add("max-h-0");
+          mobileMenu.classList.remove("max-h-[500px]");
+        }
+      });
+
+      // Desktop about dropdown toggle
+      const aboutBtn = document.getElementById("about-btn");
+      const aboutDropdown = document.getElementById("about-dropdown");
+
+      aboutBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        aboutDropdown.classList.toggle("hidden");
+      });
+
+      // Mobile about dropdown toggle
+      const mobileAboutBtn = document.getElementById("mobile-about-btn");
+      const mobileAboutDropdown = document.getElementById(
+        "mobile-about-dropdown"
+      );
+
+      mobileAboutBtn.addEventListener("click", () => {
+        mobileAboutDropdown.classList.toggle("hidden");
+      });
+
+      // Close dropdowns when clicking outside
+      window.addEventListener("click", (e) => {
+        if (!aboutBtn.contains(e.target)) {
+          aboutDropdown.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
