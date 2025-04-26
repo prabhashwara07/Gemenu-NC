@@ -305,11 +305,23 @@
           <h2 class="text-3xl font-bold text-gray-300 heading-font">Media Unit Information</h2>
         </div>
 
-        <!-- Mission Statement -->
+        <!-- Mission Statement with Integrated Teacher Image -->
         <div class="mb-12">
-          <p class="text-md text-gray-300">
-            This page is dedicated to showcasing the committees appointed to lead our school’s Media Unit, following its official registration under the Government of the Democratic Socialist Republic of Sri Lanka. Each image below represents a different term’s committee, capturing the evolving leadership and dedication of our student team as the Media Unit continues to grow and thrive year after year.
-          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-6">
+            <div class="sm:w-1/3">
+              <div class="w-48 h-48 content-card cursor-pointer mx-auto" onclick="openModal('assets/media-miss.jpg')">
+                <div class="image-wrapper">
+                  <img src="assets/media-miss.jpg" alt="W.R.Damayanthi Warnakulasooriya" />
+                </div>
+              </div>
+            </div>
+            <div class="sm:w-2/3">
+              <p class="text-md text-gray-300 text-center md:text-left">
+                This page is dedicated to showcasing the committees appointed to lead our school’s Media Unit, following its official registration under the Government of the Democratic Socialist Republic of Sri Lanka. Under the guidance of our dedicated Master in Charge, 
+                <span class="text-accent-gold font-medium">W.R.Damayanthi Warnakulasooriya</span>, the Media Unit has flourished, fostering creativity and leadership among students. Each image below represents a different term’s committee, capturing the evolving leadership and dedication of our student team as the Media Unit continues to grow and thrive year after year.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Committee Images in Horizontal Line -->
@@ -332,7 +344,7 @@
 
     <!-- Modal for Enlarged Image -->
     <div id="imageModal" class="modal">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <span class="close-btn" onclick="closeModal()">×</span>
       <img id="modalImage" class="modal-content" src="" alt="Enlarged Image" />
     </div>
 
